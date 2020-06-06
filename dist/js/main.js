@@ -109,7 +109,7 @@ document.querySelector('.js-btn').onclick = function () {
 /***/ (function(module, exports) {
 
 // <!-- Initialize Swiper -->
-var sliderText = new Swiper('.slider-text', {
+var sliderText = new Swiper('.js-slider-text', {
   speed: 1000,
   slidesPerView: 3,
   spaceBetween: 0,

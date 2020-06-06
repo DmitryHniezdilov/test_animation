@@ -1,6 +1,6 @@
 // <!-- Initialize Swiper -->
 
-let sliderText = new Swiper('.slider-text', {
+let sliderText = new Swiper('.js-slider-text', {
   speed: 1000,
   slidesPerView: 3,
   spaceBetween: 0,

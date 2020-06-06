@@ -772,11 +772,11 @@ button.swiper-pagination-bullet {
 }
 
 * > * {
-  cursor: url("../test_animation/dist/img/svg/cursor.svg") 8 8, auto;
+  cursor: url("../img/svg/cursor.svg") 8 8, auto;
 }
 
 * > * :hover {
-  cursor: url("../test_animation/dist/img/svg/cursor.svg") 8 8, auto;
+  cursor: url("../img/svg/cursor.svg") 8 8, auto;
 }
 
 ::selection {
@@ -1046,17 +1046,17 @@ button.swiper-pagination-bullet {
 }
 
 .slider-text__slide.swiper-slide-active {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active :hover {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active .slider-text__inner {
   opacity: 1;
   transition: all 0.8s ease-in-out;
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active .slider-text__inner .slider-text__text {
@@ -1064,11 +1064,11 @@ button.swiper-pagination-bullet {
 }
 
 .slider-text__slide.swiper-slide-prev {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev :hover {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev .slider-text__inner {
@@ -1076,7 +1076,7 @@ button.swiper-pagination-bullet {
   right: 79%;
   transform: rotate(-1.5deg);
   transition: all 0.8s ease-in-out;
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev .slider-text__inner .slider-text__text {
@@ -1085,11 +1085,11 @@ button.swiper-pagination-bullet {
 }
 
 .slider-text__slide.swiper-slide-next {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next :hover {
-  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next .slider-text__inner {
@@ -1097,7 +1097,7 @@ button.swiper-pagination-bullet {
   left: 79%;
   transform: rotate(1.5deg);
   transition: all 0.8s ease-in-out;
-  cursor: url("../test_animation/dist/test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next .slider-text__inner .slider-text__text {
