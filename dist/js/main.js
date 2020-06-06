@@ -118,7 +118,7 @@ var sliderText = new Swiper('.slider-text', {
   loop: true,
   loopFillGroupWithBlank: true
 });
-var sliderImg = new Swiper(".slider-img__ratio", {
+var sliderImg = new Swiper(".js-sliderImg", {
   slidesPerView: 1,
   spaceBetween: 0,
   slidesPerGroup: 1,
@@ -135,6 +135,12 @@ var sliderImg = new Swiper(".slider-img__ratio", {
       this.slides[2].classList.add("js-fade");
       this.slides[3].classList.add("js-fade");
       this.slides[4].classList.add("js-fade");
+      this.slides[2].setAttribute("id", "js-scene1");
+      this.slides[3].setAttribute("id", "js-scene2");
+      this.slides[4].setAttribute("id", "js-scene3");
+      initParallax("js-scene1");
+      initParallax("js-scene2");
+      initParallax("js-scene3");
     },
     transitionStart: function transitionStart() {
       var removeFade = document.querySelectorAll(".js-fade");
@@ -144,14 +150,28 @@ var sliderImg = new Swiper(".slider-img__ratio", {
           removeFade[i].classList.remove("js-fade");
         }
       }
+
+      var removeId = document.querySelectorAll('[id*="js-scene"]');
+
+      if (removeId.length > 0) {
+        for (var _i = 0; _i < removeId.length; _i++) {
+          removeId[_i].removeAttribute('id');
+        }
+      }
     },
     transitionEnd: function transitionEnd() {
       var imgActive = document.querySelectorAll(".swiper-slide-active");
       imgActive[1].classList.add("js-fade");
+      imgActive[1].setAttribute("id", "js-scene1");
       var imgNext = document.querySelectorAll(".swiper-slide-next");
       imgNext[1].classList.add("js-fade");
+      imgNext[1].setAttribute("id", "js-scene2");
       var imgPrev = document.querySelectorAll(".swiper-slide-prev");
       imgPrev[1].classList.add("js-fade");
+      imgPrev[1].setAttribute("id", "js-scene3");
+      initParallax("js-scene1");
+      initParallax("js-scene2");
+      initParallax("js-scene3");
     }
   }
 }); // <!-- Initialize sliderImg -->
@@ -169,6 +189,17 @@ sliderText.on('slideChangeTransitionStart', function () {
   setTimeout(function () {
     pathAnim.classList.add("is-pathAnim");
   }, 1);
+}); // <!-- Parallax init for img -->
+
+function initParallax(element) {
+  var scene = document.getElementById(element);
+  var parallaxInstance = new Parallax(scene);
+} // <!-- Init Parallax fot text and Splitting -->
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  initParallax('js-text-scene');
+  Splitting();
 });
 
 /***/ }),

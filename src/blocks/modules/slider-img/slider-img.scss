@@ -1,0 +1,183 @@
+.slider-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__ratio {
+        width: 67vw;
+        height: calc(67vw * 1.476);
+        max-width: 250px;
+        max-height: 370px;
+
+        @media screen and (min-width: $screen-sm) {
+            max-height: 403px;
+            max-width: 273px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            height: 71.5vh;
+            width: calc(71.5vh * 1.431);
+            max-width: 768px;
+            max-height: 530px;
+        }
+
+        @media screen and (min-width: $screen-xl) {
+            height: 81.4vh;
+            width: calc(81.4vh * 1.474);
+            max-width: none;
+            max-height: none;
+        }
+    }
+
+    &__inner {
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    &__parallax {
+        width: 100%;
+        height: 100%;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // ***img position***
+        &.swiper-slide-active {
+            & .slider-img__inner {
+                width: 100%;
+                height: 100%;
+                max-width: 250px;
+                max-height: 368px;
+                transform: scale(0.1, 0.1) rotate(-185deg);
+
+                @media screen and (min-width: $screen-sm) {
+                    max-height: 403px;
+                    max-width: 273px;
+                }
+
+                @media screen and (min-width: $screen-md) {
+                    width: calc(100% * 1.402);
+                    max-width: 359px;
+                    max-height: none;
+                    position: absolute;
+                }
+
+                @media screen and (min-width: $screen-xl) {
+                    max-width: none;
+                    max-height: none;
+                }
+            }
+
+            & .slider-img__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+        }
+
+        &.swiper-slide-prev {
+            & .slider-img__inner {
+                @media screen and (min-width: $screen-md) {
+                    width: 63.67%;
+                    height: 44.93%;
+                    transform: translate(-55%, 55%) scale(0.3, 0.3) rotate(175deg);
+                }
+
+                @media screen and (min-width: $screen-xl) {
+                    width: 68.98%;
+                    height: 47.15%;
+                }
+            }
+
+            & .slider-img__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: scale(2) translateY(17.5%);
+            }
+        }
+
+        &.swiper-slide-next {
+            & .slider-img__inner {
+                @media screen and (min-width: $screen-md) {
+                    width: 91.4%;
+                    height: 31%;
+                    transform: translate(55%, -55%) scale(0.3, 0.3) rotate(165deg);
+                }
+
+                @media screen and (min-width: $screen-xl) {
+                    width: 100%;
+                    height: 33.9%;
+                }
+            }
+
+            & .slider-img__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        // *** img animation ***
+
+        &.js-fade.swiper-slide-active {
+            opacity: 1;
+
+            & .slider-img__inner {
+                opacity: 1;
+                transition: all 1500ms;
+                transform: rotate(1.5deg);
+            }
+        }
+
+        &.js-fade.swiper-slide-next {
+            @media screen and (min-width: $screen-md) {
+                opacity: 1;
+
+                & .slider-img__inner {
+                    opacity: 1;
+                    transform: translate(-5%, 86%) rotate(1.5deg) scale(1);
+                    transition: all 1500ms;
+
+                    & .slider-img__img--top {
+                        object-position: 50% 10%;
+                    }
+
+                    @media screen and (min-width: $screen-xl) {
+                        transform: translate(-2%, 78%) rotate(1.5deg);
+                    }
+                }
+            }
+        }
+
+        &.js-fade.swiper-slide-prev {
+            @media screen and (min-width: $screen-md) {
+                opacity: 1;
+
+                & .slider-img__inner {
+                    opacity: 1;
+                    transition: all 1500ms;
+                    transform: translate(-7%, -20%) rotate(1.5deg);
+
+                    @media screen and (min-width: $screen-xl) {
+                        transform: translate(-12%, -16%) rotate(1.5deg);
+                    }
+                }
+            }
+        }
+    }
+}

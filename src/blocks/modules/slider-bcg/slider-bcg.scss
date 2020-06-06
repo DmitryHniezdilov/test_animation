@@ -1,0 +1,71 @@
+.slider-bcg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        width: 90vw;
+        height: calc(90vw * 1.265);
+        max-width: 339px;
+        max-height: 429px;
+        position: relative;
+        top: -1%;
+
+        @media screen and (min-width: $screen-sm) {
+            max-width: 392px;
+            max-height: 493px;
+            top: 0;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            width: calc(86vh * 0.836);
+            height: 86vh;
+            max-width: 628px;
+            max-height: 789px;
+        }
+
+        @media screen and (min-width: $screen-xl) {
+            height: 84.2vh;
+            width: 84.2vh;
+            top: -8.5%;
+            padding-left: calc( 84.2vh * 0.16 );
+            max-width: none;
+            max-height: none;
+        }
+    }
+
+    &__path {
+        opacity: 0;
+
+        @keyframes dash {
+            from {
+                stroke-dashoffset: 1105;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+
+    // *** svg animation ***
+
+    &__svg {
+        & .is-pathAnim.slider-bcg__path {
+            stroke-dasharray: 1105;
+            stroke-dashoffset: 0;
+            animation: dash 5s;
+            opacity: 1;
+            transition: opacity 4s;
+
+            @media screen and (min-width: $screen-md) {
+                stroke-dasharray: 1060;
+            }
+        }
+    }
+}

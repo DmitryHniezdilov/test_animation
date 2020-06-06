@@ -772,11 +772,11 @@ button.swiper-pagination-bullet {
 }
 
 * > * {
-  cursor: url("/img/svg/cursor.svg") 8 8, auto;
+  cursor: url("../test_animation/dist/img/svg/cursor.svg") 8 8, auto;
 }
 
 * > * :hover {
-  cursor: url("/img/svg/cursor.svg") 8 8, auto;
+  cursor: url("../test_animation/dist/img/svg/cursor.svg") 8 8, auto;
 }
 
 ::selection {
@@ -998,7 +998,6 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
-  font-display: swap;
   letter-spacing: 0.03em;
   text-transform: capitalize;
   color: #000;
@@ -1006,8 +1005,6 @@ button.swiper-pagination-bullet {
   transition: all 1s ease-in-out;
   -webkit-text-stroke: 1px transparent;
   text-stroke: 1px transparent;
-  filter: url(#filter);
-  -webkit-filter: url(#filter);
 }
 
 .socials__link:hover {
@@ -1023,13 +1020,19 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
-.slider-text {
-  position: absolute;
+.slider__wrap {
+  position: absolute !important;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   z-index: 3;
+  pointer-events: auto !important;
+}
+
+.slider-text {
+  width: 100%;
+  height: 100%;
 }
 
 .slider-text__slide {
@@ -1038,25 +1041,22 @@ button.swiper-pagination-bullet {
   justify-content: center;
 }
 
-.slider-text__slide > * {
+.slider-text__slide .slider-text__inner {
   opacity: 0;
 }
 
 .slider-text__slide.swiper-slide-active {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active :hover {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
-}
-
-.slider-text__slide.swiper-slide-active > * {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active .slider-text__inner {
   opacity: 1;
   transition: all 0.8s ease-in-out;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-active .slider-text__inner .slider-text__text {
@@ -1064,15 +1064,11 @@ button.swiper-pagination-bullet {
 }
 
 .slider-text__slide.swiper-slide-prev {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev :hover {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
-}
-
-.slider-text__slide.swiper-slide-prev > * {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev .slider-text__inner {
@@ -1080,6 +1076,7 @@ button.swiper-pagination-bullet {
   right: 79%;
   transform: rotate(-1.5deg);
   transition: all 0.8s ease-in-out;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-prev .slider-text__inner .slider-text__text {
@@ -1088,15 +1085,11 @@ button.swiper-pagination-bullet {
 }
 
 .slider-text__slide.swiper-slide-next {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next :hover {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
-}
-
-.slider-text__slide.swiper-slide-next > * {
-  cursor: url("/img/svg/cursordrop.svg") 9 17, url("/img/svg/cursor.svg") 8 8, auto !important;
+  cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next .slider-text__inner {
@@ -1104,6 +1097,7 @@ button.swiper-pagination-bullet {
   left: 79%;
   transform: rotate(1.5deg);
   transition: all 0.8s ease-in-out;
+  cursor: url("../test_animation/dist/test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 }
 
 .slider-text__slide.swiper-slide-next .slider-text__inner .slider-text__text {
@@ -1151,6 +1145,14 @@ button.swiper-pagination-bullet {
   display: block;
   overflow: hidden;
   opacity: 0;
+}
+
+.slider-img__parallax {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-img__slide {

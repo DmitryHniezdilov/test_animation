@@ -1,0 +1,47 @@
+.socials {
+
+    &__list {
+        list-style: none;
+        display: inline-block;
+        font-size: 0;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
+        border-radius: 0.5rem;
+
+        &::after {
+            display: inline-block;
+            content: "";
+            margin: 0 8px 2px;
+            width: 56px;
+            height: 1px;
+            background: #393939;
+            opacity: 0.24;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    &__link {
+        z-index: 5;
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1rem;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: #000;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+        -webkit-text-stroke: 1px transparent;
+        text-stroke: 1px transparent;
+
+        &:hover {
+            transition: all 1s ease-in-out;
+            color: #580300;
+            -webkit-text-stroke: 1px #580300;
+            text-stroke: 1px #580300;
+        }
+    }
+}
