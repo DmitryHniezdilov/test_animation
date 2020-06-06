@@ -14,16 +14,16 @@
         // ***text position***
 
         &.swiper-slide-active {
-            cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+            cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
             :hover {
-                cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
             }
 
             .slider-text__inner {
                 opacity: 1;
                 transition: all 0.8s ease-in-out;
-                cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
                 .slider-text__text {
                     fill: #580300;
@@ -32,10 +32,10 @@
         }
 
         &.swiper-slide-prev {
-            cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+            cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
             :hover {
-                cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
             }
 
             .slider-text__inner {
@@ -43,7 +43,7 @@
                 right: 79%;
                 transform: rotate(-1.5deg);
                 transition: all 0.8s ease-in-out;
-                cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
                 @media screen and (min-width: $screen-md) {
                     right: 85%;
@@ -65,10 +65,10 @@
         }
 
         &.swiper-slide-next {
-            cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+            cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
             :hover {
-                cursor: url("../test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
             }
 
             .slider-text__inner {
@@ -76,7 +76,7 @@
                 left: 79%;
                 transform: rotate(1.5deg);
                 transition: all 0.8s ease-in-out;
-                cursor: url("../test_animation/dist/test_animation/dist/img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
+                cursor: url("../img/svg/cursordrop.svg") 9 17, url("../img/svg/cursor.svg") 8 8, auto !important;
 
                 @media screen and (min-width: $screen-md) {
                     left: 85%;
