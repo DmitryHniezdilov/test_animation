@@ -1060,6 +1060,7 @@ button.swiper-pagination-bullet {
 
 .slider-text__slide.swiper-slide-active .slider-text__inner .slider-text__text {
   fill: #580300;
+  transition: all 0.8s ease-in-out;
 }
 
 .slider-text__slide.swiper-slide-prev {
